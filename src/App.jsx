@@ -1,9 +1,10 @@
 import Header from "./component/Header";
-import ControlledTabsExample from "./component/slider"
+import ControlledTabsExample from "./component/slider";
+import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <>
-      <Header />
+      <Carousel1 />
       <ControlledTabsExample />
     </>
   );

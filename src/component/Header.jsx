@@ -19,5 +19,5 @@ function ControlledTabsExample() {
     </Tabs>
   );
 }
-
 export default ControlledTabsExample;
+
