@@ -1,11 +1,14 @@
-import Header from "./component/Header";
-import ControlledTabsExample from "./component/slider";
-import "bootstrap/dist/css/bootstrap.min.css";
+import About from "./components/About/About";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/navbar";
+
 const App = () => {
   return (
     <>
-      <Carousel1 />
-      <ControlledTabsExample />
+      <Navbar />
+      <Hero />
+      <About />
+      
     </>
   );
 };
