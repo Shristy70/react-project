@@ -1,16 +1,13 @@
-import About from "./components/About/About";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/navbar";
-import Services from "./components/services/Services";
 
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-    </>
-  );
-};
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+imp
+
+const App=()=>{
+    return(
+        <>
+        
+        </>
+    )
+}
 export default App;
