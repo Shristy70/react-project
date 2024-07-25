@@ -1,19 +1,7 @@
 {
   "data": [
     {
-      "id": 1,
-      "name": "John",
-      "city": "bhopal",
-      "fees": 20000
-    },
-    {
-      "id": 2,
-      "name": "John",
-      "city": "bhopal",
-      "fees": 20000
-    },
-    {
-      "id": 3,
+      "id": "2",
       "name": "John",
       "city": "bhopal",
       "fees": 20000
