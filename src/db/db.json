@@ -5,6 +5,28 @@
       "name": "John",
       "city": "bhopal",
       "fees": 20000
+    },
+    {
+      "id": "5",
+      "name": "shristy",
+      "city": "bpl",
+      "fees": "450000"
+    },
+    {
+      "id": "1",
+      "name": "shristy gour",
+      "enter fees": "2000"
+    },
+    {
+      "id": "1",
+      "name": "shristy gour",
+      "enter fees": "2000"
+    },
+    {
+      "id": "8",
+      "name": "priyansh",
+      "enter fees": "20000",
+      "city": "bpl"
     }
   ]
 }

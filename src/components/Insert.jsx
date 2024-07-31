@@ -4,54 +4,76 @@ import { useState } from "react";
 import axios from "axios";
 const Insert = () => {
   const [input, setInput] = useState({});
-
-  const handleChange = (e) => {
+  const handelChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    setInput(values=>({...values , [name]:value}))
-    console.log(input);
+    setInput((values) => ({ ...values, [name]: value }));
   };
-  const handleclick = () => {
+  const handelClick = (e) => {
     e.preventDefault();
     let url = "http://localhost:3000/data";
-    axios.post(url,input).then((res)=>{
-      alert("insert data");
-      setInput({});
-
-    }).catch((err)=>{
-console.log(err);
-alert("alert !!!");
-    })
-  }
+    axios
+      .post(url, input)
+      .then((res) => {
+        console.log(res.data);
+        alert("data insert");
+      })
+      .catch((err) => {
+        alert("errror");
+      });
+  };
   return (
     <>
-      <h1>this is insert page</h1>
-      <hr />
-   
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Id :</Form.Label>
-        <Form.Control type="text" name="id" placeholder="Enter your id" value={input.id}onChange={handleChange} />
+      <Form>
+       
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>id</Form.Label>
+          <Form.Control
+            type="text"
+            name="id"
+            value={input.id}
+            placeholder="enter a id"
+            onChange={handelChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="name"
+            name="name"
+            value={input.name}
+            onChange={handelChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>city</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="enter city"
+            name="city"
+            value={input.city}
+            onChange={handelChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>fees</Form.Label>
+          <Form.Control
+            type="number"
+            placeholder="enter pass"
+            name="enter fees"
+            value={input.fees}
+            onChange={handelChange}
+          />
         </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>name :</Form.Label>
-        <Form.Control type="text"  name="name"  placeholder="enter your name" value={input.name} onChange={handleChange}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>city :</Form.Label>
-        <Form.Control type="text" name="city"  placeholder="enter your city" value={input.city} onChange={handleChange}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>fees :</Form.Label>
-        <Form.Control type="text"  name="fees"  placeholder="enter your fees" value={input.fees} onChange={handleChange}/>
-      </Form.Group>
-
-      <Button variant="primary" type="submit" onClick={handleclick}>
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit" onClick={handelClick}>
+          Submit
+        </Button>
+      </Form>
     </>
   );
 };
+
 export default Insert;

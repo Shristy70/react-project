@@ -8,7 +8,9 @@ const Layout = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">cybrom</Navbar.Brand>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
           <Nav className="me-auto">
             <Nav.Link as={Link} to="home">
               Home
@@ -19,11 +21,11 @@ const Layout = () => {
             <Nav.Link as={Link} to="insert">
               Insert
             </Nav.Link>
-            <Nav.Link as={Link} to="search">
-              Search
-            </Nav.Link>
             <Nav.Link as={Link} to="update">
               Update
+            </Nav.Link>
+            <Nav.Link as={Link} to="search">
+              Search
             </Nav.Link>
             <Nav.Link as={Link} to="contact">
               Contact
