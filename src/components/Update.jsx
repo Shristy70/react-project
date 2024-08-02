@@ -6,7 +6,7 @@ const Update = () => {
   const loaddata =()=>{
     let url = "http://localhost:3000/data"
     axios.get(url).then((res)=>{
-setData(res.data)
+    setData(res.data)
     })
   }
   useEffect(() => {
