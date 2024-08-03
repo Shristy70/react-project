@@ -1,22 +1,17 @@
-import { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 const Home = () => {
-  const [data, setData] = useState(0);
-  const [mul, setMul] = useState(0);
-  useEffect(() => {
-    setMul(data * 2);
-  }, [data]);
   return (
     <>
-      <h3>this is home page</h3>
-      <h1> counter : {data}</h1>
-      <h2>multification : {mul}</h2>
-      <button
-        onClick={() => {
-          setData(data + 1);
-        }}
-      >
-        increase
-      </button>
+      <h1>Todo App :</h1>
+      <Container>
+        <Row>
+          <Col sm>ITEMS</Col>
+          <Col sm>DATE</Col>
+          <Col sm>DELETE</Col>
+        </Row>
+      </Container>
     </>
   );
 };
